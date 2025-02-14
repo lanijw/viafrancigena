@@ -19,9 +19,10 @@ Please note the following, when using these files:
     Google Maps for. These accomodations contain "[Coordinates]" in the
     coordinate column, but are then removed from the list when parsing to the
     waypoint XML and latex overview.
-* Some of the accomodation has a question mark in front. For these accomodations
-    something is unclear. The most common reason I marked an accomodation like
-    that, is because I wasn't sure where they were located.
+* Some of the accomodation has a question mark in front of the town name. For
+    these accomodations something is unclear. The most common reason I marked
+    an accomodation like that, is because I wasn't sure where they were
+    located.
 * It costs something to entertain accomodations like these. If the price says
     "donation" that doesn't mean you should just walk away not having given
     anything. Please give at the very least 10EUR as a donation where at all
