@@ -1,0 +1,84 @@
+% --- Basic Typesetting ---
+\usepackage[utf8]{inputenc} % Sets input encoding for file
+\usepackage{fvextra} % Improves rudimentary formatting
+\usepackage{csquotes} % Typesets quotes
+
+% --- Page Dimensions ---
+\usepackage[a4paper, landscape, top=0, bottom=-2em, left=1em, right=1em, includeheadfoot]{geometry} % Page dimensions including support for icons in header.
+\geometry{a4paper}
+\setlength{\headheight}{20pt} % Enlarges head height for icons
+\setlength{\headsep}{5pt}
+\setlength{\footskip}{0pt}
+
+% --- Base Utilities ---
+\usepackage{fancyvrb} % Utility package for better verbatim text
+\usepackage{float} % Enables floats
+
+% --- Typesetting ---
+\setlength{\parindent}{0pt} % Removes Indent of first line in paragraph
+\usepackage{parskip} % Fixes \parskip and \parindent mess
+\usepackage{paralist} % Adds enumerate, itemize and description environments
+\usepackage[bottom]{footmisc} % Typesets footers more nicely
+\usepackage{sectsty} % Enables commands for section typesetting
+\allsectionsfont{\sffamily\mdseries\upshape} % Typesets sections more nicely
+
+% --- Table Typesetting ---
+\usepackage{booktabs} % Typesets tables more nicely
+\usepackage{tabularx} % Adds tabularx environment with auto-fitting table columns
+\usepackage{threeparttable} % Enables threeparttable environment eliviating need for footnotes in tables
+\usepackage{multirow} % Enables multirow command for use inside table cells.
+
+% Table Of Contents Typesetting ---
+\usepackage[nottoc]{tocbibind} % Put the bibliography in the ToC
+\usepackage[titles,subfigure]{tocloft}
+\renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
+\renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape} % No bold!
+
+% --- Math Typesetting ---
+\usepackage{array} % Typesets matrices more nicely
+\usepackage{amsmath, amsthm, amssymb, amsfonts} % Adds math typesetting and fonts
+\usepackage{calculator} % Adds calculus typesetting
+\usepackage{commath} % More calculus typesetting
+
+% --- Optional Packages ---
+\usepackage{graphicx} % Enables the \includegraphics command
+\usepackage{subfig} % Enable multiple captioned figures/tables in a single float
+\usepackage[colorlinks=true, allcolors=blue]{hyperref} % Enables \href command
+\usepackage[dvipsnames]{xcolor} % Enable \textcolor command
+\usepackage{multicol} % Enables use multicolumn environment (\begin{multicols})
+\usepackage[font=small]{caption} % Enables caption for floats
+
+% --- Tikz ---
+\usepackage{tikz}
+\usetikzlibrary{intersections,calc}
+\usetikzlibrary{arrows.meta, decorations.text}
+\usepackage{pgfplots}
+
+% --- Minted ---
+%\usepackage{minted}
+%\usemintedstyle[java]{colorful} % changes theme for java syntax highlighting
+%\renewcommand{\theFancyVerbLine}{\sffamily \oldstylenums{\arabic{FancyVerbLine}}} % adjusts font size of linenos to match font and size of code
+%\setminted[java]{breaklines=true,breakbytokenanywhere=true,linenos,xleftmargin=2em} % sets default style for java minted code
+%\setminted[text]{breaklines,autogobble,breakbytokenanywhere,linenos,xleftmargin=2em} % sets default style for java minted code
+%\newenvironment{code}{\captionsetup{type=listing} \vspace*{1em}}{} % Adds code environment for minted code listings in text
+
+% --- Date Typesetting ---
+\usepackage[yyyymmdd]{datetime}
+\settimeformat{hhmmsstime}
+\renewcommand{\dateseparator}{-}
+\renewcommand{\date}{\today\ \currenttime} % Redefine date to include date and time
+
+% Enables \theversionNumber command to get current compilation count
+\usepackage{res/sty/versionnum}
+
+% --- Headers and Footers ---
+\usepackage{lastpage} % Enables \pageref{LastPage} command
+\usepackage{fancyhdr} % Enables fancy headers and footers
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt} % Removes ruler below header
+\lhead{}
+\chead{\raisebox{\height}{\small \mytitle\ \documenttype}}
+\rhead{\includegraphics[height=0.7\headheight]{res/img/laniw_logo-tight}}
+\lfoot{\small v0.0.\theversionNumber\ \textcolor{gray}{\date}}
+\cfoot{\small \shortauthor}
+\rfoot{\small \thepage\ / {\hypersetup{hidelinks}\pageref{LastPage}}}

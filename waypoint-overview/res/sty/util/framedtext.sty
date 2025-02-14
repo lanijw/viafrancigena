@@ -1,0 +1,13 @@
+\newlength{\parskipbuff}
+\setlength{\parskipbuff}{\parskip}
+
+\newsavebox{\mybox}
+\newenvironment{framedtext}[1]{
+    \noindent
+    \begin{lrbox}{\mybox}
+        \begin{minipage}{#1}
+            \setlength{\parskip}{\parskipbuff}
+            }{
+        \end{minipage}
+    \end{lrbox}\fbox{\usebox{\mybox}}
+}

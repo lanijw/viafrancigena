@@ -1,0 +1,47 @@
+\documentclass[6pt, dvipsnames]{article} % default 10pt
+
+\usepackage{res/sty/en}
+\usepackage{res/sty/document}
+\usepackage{longtable}
+
+% --- Title Page and Footer Details ---
+\newcommand{\mytitle}{Via Fracigena}
+\newcommand{\documenttype}{Accomodation List}
+\newcommand{\shortauthor}{Lani Wagner}
+\newcommand{\authoremail}{lani.julian.wagner+githubviafrancigena@gmail.com}
+\newcommand{\myauthor}{\shortauthor\\\href{mailto:\authoremail}{\authoremail}}
+
+%\renewcommand{\labelenumii}{\arabic{enumi}.\arabic{enumii}} % Change second level of enumerated lists to arabic numbers
+
+\renewcommand{\arraystretch}{1}
+\setlength{\tabcolsep}{0pt}
+
+\begin{document}
+    \begin{longtable}{p{.02\linewidth} | p{.1\linewidth} | p{.075\linewidth} | p{.07\linewidth} | p{.1\linewidth} | p{.135\linewidth} | p{.4\linewidth}}
+        \emph{ID} & \emph{Name} & \emph{Address} & \emph{Town} & \emph{Phone Numbers} & \emph{Description} & \emph{src} \\
+        \hline
+        \endfirsthead
+
+        \emph{ID} & \emph{Name} & \emph{Address} & \emph{Town} & \emph{Phone Numbers} & \emph{Description} & \emph{src} \\
+        \hline
+        \endhead
+
+        \hline
+        \multicolumn{7}{p{\linewidth}}{\textcolor{gray}{continued on next page}}
+        \endfoot
+
+        \endlastfoot
+
+        \input{lodging-overview.tex}
+    \end{longtable}
+
+%    \begin{table}[H]
+%        \centering
+%        \begin{tabular}{}
+%             \\\hline
+%            \input{lodging-overview.tex}
+%        \end{tabular}
+%        \label{tab:viafrancigena_accomodation}
+%    \end{table}
+\end{document}
+

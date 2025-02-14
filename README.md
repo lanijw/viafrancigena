@@ -3,6 +3,9 @@
 Contains parsed results waypoints for navigation of loggings from Porto Ceresio (first official stop on route in Pavia) to Dragoni (near Caserta, which is north of Napoli).
 
 Please note the following, when using these files:
+* The accomodations from Porto Ceresio to Pavia are not part of the Via
+    Francigena, neither is the path between these two places the one the Via
+    Francigena takes.
 * The first version of this list was aggregated using the PDFs on the
     viefrancigene.org website. These PDFs can be found here:
     * https://www.viefrancigene.org/wp-content/uploads/2025/02/02-Accoglienza-Pavia-Lucca-2.pdf

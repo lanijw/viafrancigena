@@ -1,0 +1,15 @@
+% -- Enables \theversionNumber variable to get current compilation count ---
+
+\newcounter{versionNumber}
+\makeatletter
+% At the end write the current value back to the `.aux` file
+\AtEndDocument{
+  \immediate\write\@auxout{
+    \string\setcounter{versionNumber}{\number\value{versionNumber}}
+  }
+}
+\makeatother
+% Step the counter at the beginning
+\AtBeginDocument{
+  \stepcounter{versionNumber}
+}
