@@ -1,8 +1,9 @@
-\documentclass[6pt, dvipsnames]{article} % default 10pt
+\documentclass[1pt, dvipsnames]{article} % default 10pt
 
 \usepackage{res/sty/en}
 \usepackage{res/sty/document}
 \usepackage{longtable}
+\usepackage{lmodern} % Ensures better font rendering
 
 % --- Title Page and Footer Details ---
 \newcommand{\mytitle}{Via Fracigena}
@@ -17,31 +18,25 @@
 \setlength{\tabcolsep}{0pt}
 
 \begin{document}
-    \begin{longtable}{p{.02\linewidth} | p{.1\linewidth} | p{.075\linewidth} | p{.07\linewidth} | p{.1\linewidth} | p{.135\linewidth} | p{.4\linewidth}}
-        \emph{ID} & \emph{Name} & \emph{Address} & \emph{Town} & \emph{Phone Numbers} & \emph{Description} & \emph{src} \\
-        \hline
-        \endfirsthead
+    {\fontsize{6pt}{7pt}\selectfont
 
-        \emph{ID} & \emph{Name} & \emph{Address} & \emph{Town} & \emph{Phone Numbers} & \emph{Description} & \emph{src} \\
-        \hline
-        \endhead
+        \begin{longtable}{p{.02\linewidth} | p{.1\linewidth} | p{.075\linewidth} | p{.07\linewidth} | p{.1\linewidth} | p{.135\linewidth} | p{.4\linewidth}}
+            \emph{ID} & \emph{Name} & \emph{Address} & \emph{Town} & \emph{Phone Numbers} & \emph{Description} & \emph{src} \\
+            \hline
+            \endfirsthead
 
-        \hline
-        \multicolumn{7}{p{\linewidth}}{\textcolor{gray}{continued on next page}}
-        \endfoot
+            \emph{ID} & \emph{Name} & \emph{Address} & \emph{Town} & \emph{Phone Numbers} & \emph{Description} & \emph{src} \\
+            \hline
+            \endhead
 
-        \endlastfoot
+            \hline
+            \multicolumn{7}{p{\linewidth}}{\textcolor{gray}{continued on next page}}
+            \endfoot
 
-        \input{lodging-overview.tex}
-    \end{longtable}
+            \endlastfoot
 
-%    \begin{table}[H]
-%        \centering
-%        \begin{tabular}{}
-%             \\\hline
-%            \input{lodging-overview.tex}
-%        \end{tabular}
-%        \label{tab:viafrancigena_accomodation}
-%    \end{table}
+            \input{lodging-overview.tex}
+        \end{longtable}
+    }
 \end{document}
 
