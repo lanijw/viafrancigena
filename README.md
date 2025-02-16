@@ -28,3 +28,7 @@ Please note the following, when using these files:
     anything. Please give at the very least 10EUR as a donation where at all
     possible.
 
+The gpx files are separated into sections, becase Garmin BaseCamp can't seem to
+handle the entire route. It crashes when trying to transfer the route to a GPS
+device. 
+

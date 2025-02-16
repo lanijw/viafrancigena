@@ -1,7 +1,7 @@
 from io import StringIO
 import pandas as pd
 
-with open("lodgings.csv", "r") as f:
+with open("lodgings.ssv", "r") as f:
     lines = list(map(lambda l: l.replace(",", "_").replace(";", ","), f.readlines()))
 df = pd.read_csv(
     StringIO("\n".join(lines)),
@@ -20,12 +20,6 @@ df = df.rename(columns={
 
 df = df.astype(str)
 df = df.apply(lambda col: col.map(lambda x: x.replace("_", ",")))
-#df["town"] = df["town"].str.replace("_", ",")
-#df["address"] = df["address"].str.replace("_", ",")
-#df["coordinates"] = df["coordinates"].str.replace("_", ",")
-#df["phone_numbers"] = df["phone_numbers"].str.replace("_", ",")
-#df["description"] = df["description"].str.replace("_", ",")
-#df["src"] = df["src"].str.replace("_", ",")
 
 df["name"] = df["name"].apply(str.strip)
 df["address"] = df["address"].apply(str.strip)
